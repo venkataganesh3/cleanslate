@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import single from '../assets/logo2[1][1].png';
-import youtube from '../assets/youtube.png';
+import youtube from '../assets/Youtube.png';
 import twitter from '../assets/twitter.png';
 import instagram from '../assets/instagram.png';
 import Location from '../assets/location.png';
