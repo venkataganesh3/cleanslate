@@ -17,7 +17,9 @@ app.use(bodyParser.json());
 // cors() is used to ready to take request from anywhere
 const cors=require('cors');
 const { applyTimestamps } = require('./Models/User');
-app.use(cors());
+app.use(cors({
+  origin:'https://cleanslate-iota.vercel.app'
+}))
 app.use('/auth',AuthRouter);
 app.use('/wauth',WauthRouter);
 app.use('/worker',Worker);
