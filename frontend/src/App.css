@@ -1,0 +1,74 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body
+{
+    padding:0;
+    margin:0;
+}
+.logo
+{
+    display: flex;
+}
+.logo img
+{
+    width:70px;
+}
+.nav
+{
+    padding:20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+.nav .part2
+{
+    display: flex;
+    gap:50px;
+}
+.nav .part2 a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+.started
+{
+    background-color: #F2BFF9;
+    text-decoration: none;
+    padding:20px;
+    border-radius: 50px;
+    width:160px;
+    text-align: center;
+    font-weight: 500;
+    position: inherit;
+}
+Link
+{
+    text-decoration: none;
+    color: black;
+}
+
+.logout-icon {
+    font-size: 25px; /* Icon size */
+    color: #830606; /* Logout Icon Color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animations */
+    margin-left: 20px; /* Space between links and icon */
+  }
+  
+  .logout-icon:hover {
+    color: #690b0b; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  

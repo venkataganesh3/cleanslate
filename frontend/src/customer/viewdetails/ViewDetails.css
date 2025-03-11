@@ -1,0 +1,53 @@
+.profile-container {
+  padding:10px 60px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.more-info {
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+
+.line {
+  height: 4px;
+  background-color: #2d2d8b;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  margin: 60px auto;
+  justify-content: space-evenly;
+}
+
+.avatar {
+  margin-right: 40px;
+  text-align: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details div {
+  font-size: 18px;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #0a0b4e;
+}
+

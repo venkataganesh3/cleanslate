@@ -1,0 +1,55 @@
+.booking-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.more-info {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background: #2d2d8b;
+}
+
+.booking-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.booking-container form input[type="text"] {
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background: #f4f4f4;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.booking-container form input[type="text"]:focus {
+  background: #e0e0f8;
+  box-shadow: 0 0 10px rgba(45, 45, 139, 0.5);
+}
+
+@media (max-width: 768px) {
+  .booking-container {
+    padding: 1rem;
+  }
+
+  .booking-container form { /* Corrected */
+    padding: 1.5rem;
+  }
+}

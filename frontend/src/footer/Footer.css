@@ -1,0 +1,89 @@
+*
+{
+    padding:0;
+    margin:0;
+}
+.footer
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1B1850;
+    gap:50px;
+    flex-wrap: wrap;
+    color:white;
+}
+#foot1
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:20px;
+    flex:2;
+
+}
+#foot1 p,#logos
+{
+    margin: 0px 0px 0px 50px;
+}
+#foot1 #log
+{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding:20px;
+}
+#foot1 #log img
+{
+    width: 100px;
+}
+#foot1 #logos img
+{
+    width: 60px;
+    height:60px;
+}
+#foot2
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:20px;
+   list-style: none;
+   flex:1;
+}
+#foot2 a
+{
+    text-decoration: none;
+    color:white;
+}
+#foot3
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:20px;
+    flex:1;
+}
+#foot4
+{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:20px;
+    flex:2;
+}
+#foot4 #loc
+{
+    display: flex;
+    align-items: center;
+}
+#foot4 #loc img
+{
+    width: 60px;
+}
+.copy
+{
+    background-color: #1B1850;
+    color:white;
+    text-align: center;
+    padding:20px;
+}

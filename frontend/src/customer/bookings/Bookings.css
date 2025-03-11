@@ -1,0 +1,35 @@
+.booking-container {
+  padding: 20px;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+.booking-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.booking-container table th, .booking-container table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.booking-container table th {
+  background: #2d2d8b;
+  color: #fff;
+}
+
+.booking-container table .delete-btn {
+  padding: 8px 12px;
+  background: #830606;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.booking-container table .delete-btn:hover {
+  background: #c82333;
+}

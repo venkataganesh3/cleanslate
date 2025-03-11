@@ -1,0 +1,72 @@
+.customer-history {
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  .customer-history .history-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .customer-history .history-card {
+    background: #f5eaff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+ .customer-history  .history-card h4 {
+    font-size: 22px;
+    color: #5a0087;
+  }
+  
+ .customer-history  .history-card p {
+    margin: 10px 0;
+  }
+  
+ .customer-history .location {
+    display: flex;
+    align-items: center;
+    color: #7b34d6;
+  }
+  
+ .customer-history .icon {
+    margin-right: 8px;
+  }
+  
+ .customer-history .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+ .customer-history .details-btn {
+    padding: 8px 16px;
+    border: 2px solid #7b34d6;
+    background: transparent;
+    color: #7b34d6;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .customer-history.details-btn:hover {
+    background: #7b34d6;
+    color: #fff;
+  }
+  
+ .customer-history .delete-btn {
+    padding: 8px 16px;
+    background: #370054;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ .customer-history .delete-btn:hover {
+    background: #830606;
+  }
+  

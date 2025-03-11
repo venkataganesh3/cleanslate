@@ -1,0 +1,30 @@
+
+.get-started-container {
+    text-align: center;
+    margin-bottom:60px;
+  }
+  
+  .get-started-container .banner-image {
+    width: 80%;
+    margin-top:100px;
+    margin-bottom: 30px;
+    max-width: 1000px;
+  }
+   
+ .get-started-container .button3 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap:40px;
+  }
+  
+ .get-started-container .join-btn,
+  .find-workers-btn {
+    background-color: pink;
+    border: none;
+    padding: 20px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
