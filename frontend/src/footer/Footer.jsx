@@ -2,9 +2,9 @@ import React from 'react';
 import './Footer.css';
 import single from '../assets/logo2[1][1].png';
 import youtube from '../assets/Youtube.png';
-import twitter from '../assets/twitter.png';
-import instagram from '../assets/instagram.png';
-import Location from '../assets/location.png';
+import twitter from '../assets/Twitter.png';
+import instagram from '../assets/Instagram.png';
+import Location from '../assets/Location.png';
 import Phone from '../assets/phone.png';
 import { Link } from 'react-router-dom';
 const Footer = () => {
