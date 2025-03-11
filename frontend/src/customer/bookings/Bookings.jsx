@@ -7,7 +7,7 @@ function Bookings() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/book/bookings")
+      .get("https://cleanslate-e3d8.vercel.app/book/bookings")
       .then((res) => {
         setBookings(res.data);
       })
@@ -16,7 +16,7 @@ function Bookings() {
 
   const deleteBooking = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/book/bookings/${id}`);
+      await axios.delete(`https://cleanslate-e3d8.vercel.app/book/bookings/${id}`);
       alert("Booking Completed ✅");
       setBookings(bookings.filter((booking) => booking._id !== id));
     } catch (err) {

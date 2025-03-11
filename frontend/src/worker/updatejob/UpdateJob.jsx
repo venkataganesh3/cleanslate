@@ -16,7 +16,7 @@ function UpdateJob() {
      useEffect(() => {
          const fetchDetails = async () => {
              try {
-                 const res = await axios.post("http://localhost:5000/worker/getjob", { email });
+                 const res = await axios.post("https://cleanslate-e3d8.vercel.app/worker/getjob", { email });
                  const data = res.data;
                  setEmploymentType(data.employmentType || "");
                  setSelectedTasks(data.selectedTasks || []);
@@ -54,7 +54,7 @@ function UpdateJob() {
          };
          console.log(employeeData);
          try {
-             await axios.put("http://localhost:5000/worker/updatejob", employeeData);
+             await axios.put("https://cleanslate-e3d8.vercel.app/worker/updatejob", employeeData);
              alert("Details submitted successfully!");
          } catch (error) {
              console.error("Error submitting employee data:", error);

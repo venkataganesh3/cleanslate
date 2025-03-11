@@ -14,7 +14,7 @@ function Login() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    axios.post('http://localhost:5000/auth/login', login)
+    axios.post('https://cleanslate-e3d8.vercel.app/auth/login', login)
       .then(res => {
         setEmail(res.data.email);
         console.log(res.data.token);
