@@ -1,10 +1,13 @@
 const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
 const cors = require("cors");
+const bodyParser = require("body-parser");
 require("dotenv").config();
 require("./Models/db");
 
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Import routes
 const customerRoutes = require("./routes/CustomerRouter");
 const AuthRouter = require("./Routes/AuthRouter");
 const WauthRouter = require("./Routes/WauthRouter");
@@ -12,34 +15,42 @@ const Worker = require("./Routes/WorkerRouter");
 const BookingRouter = require("./Routes/BookingRouter");
 const workermodel = require("./Models/UpdateJob");
 
-const PORT = process.env.PORT || 5000;
+// ✅ Allow CORS
+app.use(cors({
+  origin: "https://cleanslate-iota.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 
-// **CORS Middleware**
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // Allow all origins for testing
+// ✅ Handle Preflight Requests Globally
+app.options("*", (req, res) => {
+  res.header("Access-Control-Allow-Origin", "https://cleanslate-iota.vercel.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.header("Access-Control-Allow-Credentials", "true");
-
-  if (req.method === "OPTIONS") {
-    return res.status(200).end(); // Handle preflight requests
-  }
-  next();
+  return res.sendStatus(200);
 });
 
-app.use(bodyParser.json());
+// ✅ Middleware to Handle JSON
+app.use(express.json());
 
-// **API Routes**
+// ✅ Define Routes
 app.use("/auth", AuthRouter);
 app.use("/wauth", WauthRouter);
 app.use("/worker", Worker);
 app.use("/api", customerRoutes);
 app.use("/book", BookingRouter);
 
-// **Backend Route to Fetch WorkerId**
+// ✅ Test Route
+app.get("/", (req, res) => {
+  res.send("Server is running.");
+});
+
+// ✅ Worker ID Fetch Route
 app.post("/getWorker", async (req, res) => {
-  console.log("Email Received:", req.body.email);
   try {
+    console.log("Email Received:", req.body.email);
     const worker = await workermodel.findOne({ email: req.body.email });
     if (worker) {
       res.json(worker._id);
@@ -52,7 +63,7 @@ app.post("/getWorker", async (req, res) => {
   }
 });
 
-// **Start the Server**
+// ✅ Start Server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
