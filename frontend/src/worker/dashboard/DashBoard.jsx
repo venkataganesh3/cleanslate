@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from './../../context/AuthContext';
 import axios from 'axios';
-import './Dashboard.css';
+import './DashBoard.css';
 import { Link } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 
