@@ -18,7 +18,7 @@ function WSignUp() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(post);
-    axios.post('https://cleanslate-e3d8.vercel.app/wauth/wsignup', {...post})
+    axios.post('https://cleanslate-mdsv.vercel.app/wauth/wsignup', {...post})
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }

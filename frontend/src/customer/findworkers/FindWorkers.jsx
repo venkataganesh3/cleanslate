@@ -15,7 +15,7 @@ const Search = () => {
 
   useEffect(() => {
     axios
-      .get("https://cleanslate-e3d8.vercel.app/api/workers")
+      .get("https://cleanslate-mdsv.vercel.app/api/workers")
       .then((res) => {
         setWorkers(res.data);
       })

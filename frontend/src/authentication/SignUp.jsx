@@ -18,7 +18,7 @@ function SignUp() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(post);
-    axios.post('https://cleanslate-e3d8.vercel.app/auth/signup', {...post})
+    axios.post('https://cleanslate-mdsv.vercel.app/auth/signup', {...post})
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }
