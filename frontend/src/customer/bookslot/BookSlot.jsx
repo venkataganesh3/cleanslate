@@ -1,7 +1,7 @@
 import React, { useState ,useContext} from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Bookslot.css';
+import './BookSlot.css';
 import { AuthContext } from '../../context/AuthContext';
 function BookSlot() {
   const location = useLocation();
