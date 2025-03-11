@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Import Routes (Ensure case sensitivity is correct)
-const customerRoutes = require("./routes/CustomerRouter");
+const CustomerRouter = require("./routes/CustomerRouter");
 const AuthRouter = require("./routes/AuthRouter");
 const WauthRouter = require("./routes/WauthRouter");
 const Worker = require("./routes/WorkerRouter");
@@ -44,7 +44,7 @@ app.use(express.json());
 app.use("/auth", AuthRouter);
 app.use("/wauth", WauthRouter);
 app.use("/worker", Worker);
-app.use("/api", customerRoutes);
+app.use("/api", CustomerRouter);
 app.use("/book", BookingRouter);
 
 // ✅ Test Route
