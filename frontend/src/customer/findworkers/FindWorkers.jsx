@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./findworkers.css";
+import "./FindWorkers.css";
 
 const Search = () => {
   const navigate = useNavigate();
