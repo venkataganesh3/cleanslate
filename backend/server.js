@@ -7,10 +7,19 @@ require("./Models/db");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: "https://cleanslate-gamma.vercel.app",
- 
-}));
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://cleanslate-gamma.vercel.app");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+
+  // ✅ Handle Preflight (OPTIONS request)
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
+  next();
+});
 // ✅ Import Routes (Ensure case sensitivity is correct)
 const CustomerRouter = require("./routes/CustomerRouter");
 const AuthRouter = require("./routes/AuthRouter");
