@@ -12,7 +12,7 @@ function DashBoard() {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const res = await axios.post("https://cleanslate-mdsv.vercel.app/worker/getjob", {
+        const res = await axios.post("https://cleanslate-qf17.vercel.app/worker/getjob", {
           email
         });
         console.log(res);

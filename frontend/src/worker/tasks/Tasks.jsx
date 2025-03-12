@@ -10,7 +10,7 @@ function Tasks() {
   useEffect(() => {
     if (token) {
       axios
-        .get("https://cleanslate-mdsv.vercel.app/book/bookings")
+        .get("https://cleanslate-qf17.vercel.app/book/bookings")
         .then((res) => {
           // Filter tasks where worker email matches logged-in worker email
           const filteredTasks = res.data.filter(

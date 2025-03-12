@@ -14,7 +14,7 @@ function Login() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    axios.post('https://cleanslate-mdsv.vercel.app/auth/login', login)
+    axios.post('https://cleanslate-qf17.vercel.app/auth/login', login)
       .then(res => {
         setEmail(res.data.email);
         console.log(res.data.token);
