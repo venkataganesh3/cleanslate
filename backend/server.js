@@ -7,6 +7,10 @@ require("./Models/db");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+app.use(cors({
+  origin: "https://cleanslate-gamma.vercel.app",
+ 
+}));
 // ✅ Import Routes (Ensure case sensitivity is correct)
 const CustomerRouter = require("./routes/CustomerRouter");
 const AuthRouter = require("./routes/AuthRouter");
@@ -16,12 +20,7 @@ const BookingRouter = require("./routes/BookingRouter");
 const workermodel = require("./Models/UpdateJob");
 
 // ✅ Apply CORS Middleware First
-app.use(cors({
-  origin: "https://cleanslate-gamma.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+
 
 // ✅ Middleware to Handle JSON (Must come after CORS)
 app.use(express.json());
