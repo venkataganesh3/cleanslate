@@ -15,7 +15,7 @@ const Worker = require("./routes/WorkerRouter");
 const BookingRouter = require("./routes/BookingRouter");
 const workermodel = require("./Models/UpdateJob");
 
-// ✅ Apply CORS Middleware Before Routes
+// ✅ Apply CORS Middleware First
 app.use(cors({
   origin: "https://cleanslate-gamma.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -23,7 +23,11 @@ app.use(cors({
   credentials: true
 }));
 
-// ✅ Global Middleware to Handle Preflight Requests (OPTIONS)
+// ✅ Middleware to Handle JSON (Must come after CORS)
+app.use(express.json());
+app.use(bodyParser.json());
+
+// ✅ Global Middleware to Handle Preflight Requests
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://cleanslate-gamma.vercel.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -37,17 +41,14 @@ app.use((req, res, next) => {
   next();
 });
 
-// ✅ Middleware to Handle JSON
-app.use(express.json());
-
-// ✅ Define Routes (Ensure they exist)
+// ✅ Define Routes
 app.use("/auth", AuthRouter);
 app.use("/wauth", WauthRouter);
 app.use("/worker", Worker);
 app.use("/api", CustomerRouter);
 app.use("/book", BookingRouter);
 
-// ✅ Test Route
+// ✅ Health Check Route
 app.get("/", (req, res) => {
   res.send("Server is running.");
 });
