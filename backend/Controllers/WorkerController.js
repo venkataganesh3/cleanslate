@@ -1,5 +1,5 @@
 // controllers/workerCardController.js
-const  UpdateJob= require('../models/UpdateJob');
+const  UpdateJob= require('../Models/UpdateJob');
 const WorkerModel=require('./../Models/Worker');
 const updateJobDetails = async (req, res) => {
   const { email,phoneNumber, employmentType, selectedTasks, location } = req.body;

@@ -7,15 +7,7 @@ require("./Models/db");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// ✅ Import Routes (Ensure case sensitivity is correct)
-const CustomerRouter = require("./routes/CustomerRouter");
-const AuthRouter = require("./routes/AuthRouter");
-const WauthRouter = require("./routes/WauthRouter");
-const Worker = require("./routes/WorkerRouter");
-const BookingRouter = require("./routes/BookingRouter");
-const workermodel = require("./Models/UpdateJob");
-
-// ✅ Apply CORS Middleware First
+// ✅ Apply CORS Middleware First (Move it to the very top)
 app.use(cors({
   origin: "https://cleanslate-gamma.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -23,23 +15,31 @@ app.use(cors({
   credentials: true
 }));
 
-// ✅ Middleware to Handle JSON (Must come after CORS)
+// ✅ Middleware to Handle JSON
 app.use(express.json());
 app.use(bodyParser.json());
 
-// ✅ Global Middleware to Handle Preflight Requests
+// ✅ Global Middleware to Handle Preflight Requests (Move Below CORS)
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "https://cleanslate-gamma.vercel.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.header("Access-Control-Allow-Credentials", "true");
-  
+
   if (req.method === "OPTIONS") {
-    return res.sendStatus(200);
+    return res.sendStatus(200); // ✅ Fix: Ensure OPTIONS requests return 200 OK
   }
 
   next();
 });
+
+// ✅ Import Routes (Ensure case sensitivity is correct)
+const CustomerRouter = require("./routes/CustomerRouter");
+const AuthRouter = require("./routes/AuthRouter");
+const WauthRouter = require("./routes/WauthRouter");
+const Worker = require("./routes/WorkerRouter");
+const BookingRouter = require("./routes/BookingRouter");
+const workermodel = require("./Models/UpdateJob");
 
 // ✅ Define Routes
 app.use("/auth", AuthRouter);
