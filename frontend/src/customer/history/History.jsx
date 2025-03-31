@@ -10,7 +10,7 @@ function History() {
 
   useEffect(() => {
     axios
-      .get("https://cleanhome.onrender.com/book/history")
+      .get("https://cleanslate-backend.vercel.app/book/history")
       .then((res) => setHistory(res.data))
       .catch((err) => console.error("Error fetching history:", err));
   }, []);
@@ -18,7 +18,7 @@ function History() {
   const handleViewDetails = async (email, record) => {
     try {
       console.log("Email:", email);
-      const res = await axios.post("https://cleanhome.onrender.com/getWorker", {
+      const res = await axios.post("https://cleanslate-backend.vercel.app/getWorker", {
         email: email,
       });
       console.log("Worker ID:", res.data);

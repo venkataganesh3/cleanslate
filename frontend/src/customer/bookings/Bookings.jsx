@@ -7,7 +7,7 @@ function Bookings() {
 
   useEffect(() => {
     axios
-      .get("https://cleanhome.onrender.com/book/bookings")
+      .get("https://cleanslate-backend.vercel.app/book/bookings")
       .then((res) => {
         setBookings(res.data);
       })
@@ -16,7 +16,7 @@ function Bookings() {
 
   const deleteBooking = async (id) => {
     try {
-      await axios.delete(`https://cleanhome.onrender.com/book/bookings/${id}`);
+      await axios.delete(`https://cleanslate-backend.vercel.app/book/bookings/${id}`);
       alert("Booking Completed ✅");
       setBookings(bookings.filter((booking) => booking._id !== id));
     } catch (err) {

@@ -18,7 +18,7 @@ function WSignUp() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(post);
-    axios.post('https://cleanhome.onrender.com/wauth/wsignup', {...post})
+    axios.post('https://cleanslate-backend.vercel.app/wauth/wsignup', {...post})
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }
