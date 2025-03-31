@@ -18,7 +18,7 @@ function SignUp() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(post);
-    axios.post('https://cleanslate-backend.vercel.app/auth/signup', {...post})
+    axios.post('https://cleanhome.onrender.com/auth/signup', {...post})
       .then(res => console.log(res))
       .catch(err => console.log(err));
   }

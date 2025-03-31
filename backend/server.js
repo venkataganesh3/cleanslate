@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 // ✅ CORS Setup with Multiple Allowed Origins
 const allowedOrigins = [
   "https://cleanslate-gamma.vercel.app",
-  "https://cleanslate-backend.vercel.app"
+  "https://cleanhome.onrender.com"
 ];
 
 // ✅ CORS Middleware Configuration
