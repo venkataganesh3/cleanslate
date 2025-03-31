@@ -15,7 +15,7 @@ function WLogin() {
   
   const handleLogin = (event) => {
     event.preventDefault();
-    axios.post('https://cleanslate-backend.vercel.app/wauth/wlogin', login)
+    axios.post('https://cleanslate-mc6o.onrender.com/wauth/wlogin', login)
       .then(res => {
         console.log(res.data.token);
         console.log(res.data.email);

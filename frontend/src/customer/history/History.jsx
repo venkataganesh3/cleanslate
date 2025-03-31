@@ -10,7 +10,7 @@ function History() {
 
   useEffect(() => {
     axios
-      .get("https://cleanslate-backend.vercel.app/book/history")
+      .get("https://cleanslate-mc6o.onrender.com/book/history")
       .then((res) => setHistory(res.data))
       .catch((err) => console.error("Error fetching history:", err));
   }, []);
@@ -18,7 +18,7 @@ function History() {
   const handleViewDetails = async (email, record) => {
     try {
       console.log("Email:", email);
-      const res = await axios.post("https://cleanslate-backend.vercel.app/getWorker", {
+      const res = await axios.post("https://cleanslate-mc6o.onrender.com/getWorker", {
         email: email,
       });
       console.log("Worker ID:", res.data);

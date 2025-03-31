@@ -27,7 +27,7 @@ function BookSlot() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://cleanslate-backend.vercel.app/book/bookings', form);
+      await axios.post('https://cleanslate-mc6o.onrender.com/book/bookings', form);
       alert('Booking Confirmed ✅');
       navigate('/findworkers'); 
     } catch (err) {
