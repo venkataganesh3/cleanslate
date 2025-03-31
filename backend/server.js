@@ -9,7 +9,7 @@ const BookingRouter = require('./Routes/BookingRouter');
 require('dotenv').config();
 require('./Models/db');
 const workermodel =require('./Models/UpdateJob');
-const PORT=process.env.PORT || 1000;
+const PORT=process.env.PORT || 5000;
 
 
 
